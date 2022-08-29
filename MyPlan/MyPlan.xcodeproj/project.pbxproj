@@ -11,6 +11,8 @@
 		043D354428BCF213007D8DA3 /* Amiri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D354028BCF213007D8DA3 /* Amiri-Bold.ttf */; };
 		043D354528BCF213007D8DA3 /* Amiri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D354128BCF213007D8DA3 /* Amiri-Regular.ttf */; };
 		043D354628BCF213007D8DA3 /* Amiri-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D354228BCF213007D8DA3 /* Amiri-BoldItalic.ttf */; };
+		043D354928BD0F74007D8DA3 /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D354828BD0F74007D8DA3 /* ChooseView.swift */; };
+		043D354B28BD10EE007D8DA3 /* CreatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D354A28BD10EE007D8DA3 /* CreatView.swift */; };
 		045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BD28BA2DD800CCE00D /* MyPlanApp.swift */; };
 		045563C028BA2DD800CCE00D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BF28BA2DD800CCE00D /* ContentView.swift */; };
 		045563C228BA2DD900CCE00D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045563C128BA2DD900CCE00D /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 		043D354128BCF213007D8DA3 /* Amiri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Regular.ttf"; sourceTree = "<group>"; };
 		043D354228BCF213007D8DA3 /* Amiri-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-BoldItalic.ttf"; sourceTree = "<group>"; };
 		043D354728BCF230007D8DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		043D354828BD0F74007D8DA3 /* ChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
+		043D354A28BD10EE007D8DA3 /* CreatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatView.swift; sourceTree = "<group>"; };
 		045563BA28BA2DD800CCE00D /* MyPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045563BD28BA2DD800CCE00D /* MyPlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanApp.swift; sourceTree = "<group>"; };
 		045563BF28BA2DD800CCE00D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				043D354728BCF230007D8DA3 /* Info.plist */,
 				045563BD28BA2DD800CCE00D /* MyPlanApp.swift */,
 				045563BF28BA2DD800CCE00D /* ContentView.swift */,
+				043D354828BD0F74007D8DA3 /* ChooseView.swift */,
+				043D354A28BD10EE007D8DA3 /* CreatView.swift */,
 				045563C128BA2DD900CCE00D /* Assets.xcassets */,
 				043D353E28BCF1D2007D8DA3 /* fonts */,
 				045563C328BA2DD900CCE00D /* Preview Content */,
@@ -163,7 +169,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043D354B28BD10EE007D8DA3 /* CreatView.swift in Sources */,
 				045563C028BA2DD800CCE00D /* ContentView.swift in Sources */,
+				043D354928BD0F74007D8DA3 /* ChooseView.swift in Sources */,
 				045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
