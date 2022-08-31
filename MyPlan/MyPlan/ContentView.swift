@@ -13,37 +13,44 @@ struct ContentView: View {
         NavigationView{
         ZStack{
             Color("BG").ignoresSafeArea()
-            VStack{
+            VStack(spacing: 38){
+                HStack{
+                    
+                }
+                VStack(spacing: 15){
                 Image("logo")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 150)
                     .background(.white.opacity(0.4))
+                    .shadow(color: .black, radius: 3)
                     .cornerRadius(25)
                 
-                Text("Plan your travel")
-                    .font(.custom("Amiri-BoldItalic", size: 35))
+                Text("خطط سفرتك")
+                    .font(.custom("Amiri-BoldItalic", size: 45))
                     .padding(.horizontal)
                     .background(.white.opacity(0.4))
                     .cornerRadius(25)
-
+                }
                 Spacer()
                 VStack(spacing: 45){
                 NavigationLink (destination: ChooseView()) {
                   
-                    Text("Choose Your Plan")
+                    Text("اختر خطتك")
                         .font(.custom("Amiri-BoldItalic", size: 35))
                         .foregroundColor(.white)
+                        .shadow(color: .black, radius: 3)
                         .frame(width: 285, height:100)
                         .background(.white.opacity(0.4))
                         .cornerRadius(25)
                     }
                 
-                NavigationLink (destination: ChooseView()) {
+                NavigationLink (destination: CreatView()) {
                   
-                    Text("Creat Your Plan")
+                    Text("أنشئ خطتك")
                         .font(.custom("Amiri-BoldItalic", size: 35))
                         .foregroundColor(.white)
+                        .shadow(color: .black, radius: 3)
                         .frame(width: 285, height:100)
                         .background(.white.opacity(0.4))
                         .cornerRadius(25)
@@ -60,7 +67,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
-                .preferredColorScheme(.dark)
+                
 
         }
     }

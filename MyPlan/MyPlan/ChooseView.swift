@@ -9,14 +9,30 @@ import SwiftUI
 
 struct ChooseView: View {
     
+    @State var Turkey = ["H1","H2","H3","H4","H5","H6","H7"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+            ZStack{
+                Color("BG").ignoresSafeArea().opacity(1)
+              
+            VStack{
+                Text("اختر خطتك")
+                    .font(.custom("Amiri-BoldItalic", size: 45))
+                    .padding()
+                    .background(.gray.opacity(0.4))
+                    .cornerRadius(20)
+                Spacer()
+               
+            }.padding()
+        }
     }
 }
 
 struct ChooseView_Previews: PreviewProvider {
     static var previews: some View {
         ChooseView()
-            .preferredColorScheme(.dark)
+            
+            
     }
 }
