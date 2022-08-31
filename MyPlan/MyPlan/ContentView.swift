@@ -45,7 +45,7 @@ struct ContentView: View {
                         .cornerRadius(25)
                     }
                 
-                NavigationLink (destination: CreatView()) {
+                NavigationLink (destination: CreateView()) {
                   
                     Text("أنشئ خطتك")
                         .font(.custom("Amiri-BoldItalic", size: 35))
