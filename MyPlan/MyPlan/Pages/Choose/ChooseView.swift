@@ -82,6 +82,184 @@ struct ChooseView: View {
                                 }
                             }
                         }
+                        
+                        VStack(spacing: 15){
+                            HStack{
+                                
+                                Text("UAE")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                                Spacer()
+                                
+                                Text("الإمارت العربية المتحدة")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                            }
+                            .padding()
+                            .background(.white.opacity(0.4))
+                            .cornerRadius(15)
+                            
+                            ScrollView(.horizontal) {
+                                HStack(spacing: 20) {
+                                    ForEach(UAE, id: \.self){ uae in
+                                        NavigationLink(destination: Ch1View() ) {
+                                            
+                                            ZStack{
+                                                VStack{
+                                                    Image(uae)
+                                                        .resizable()
+                                                        .frame(width: 200, height: 150)
+                                                        .cornerRadius(10)
+                                                    Spacer()
+                                                    
+                                                    Text(uae)
+                                                        .foregroundColor(.black)
+                                                        .font(.custom("Amiri-Italic", size: 26))
+                                                    
+                                                    
+                                                }
+                                            }  .frame(width: 200, height: 200)
+                                                .background(.white.opacity(0.4))
+                                                .cornerRadius(10)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        VStack(spacing: 15){
+                            HStack{
+                                
+                                Text("France")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                                Spacer()
+                                
+                                Text("فرنسا")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                            }
+                            .padding()
+                            .background(.white.opacity(0.4))
+                            .cornerRadius(15)
+                            
+                            ScrollView(.horizontal) {
+                                HStack(spacing: 20) {
+                                    ForEach(France, id: \.self){ france in
+                                        NavigationLink(destination: Ch1View() ) {
+                                            
+                                            ZStack{
+                                                VStack{
+                                                    Image(france)
+                                                        .resizable()
+                                                        .frame(width: 200, height: 150)
+                                                        .cornerRadius(10)
+                                                    Spacer()
+                                                    
+                                                    Text(france)
+                                                        .foregroundColor(.black)
+                                                        .font(.custom("Amiri-Italic", size: 26))
+                                                    
+                                                    
+                                                }
+                                            }  .frame(width: 200, height: 200)
+                                                .background(.white.opacity(0.4))
+                                                .cornerRadius(10)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        VStack(spacing: 15){
+                            HStack{
+                                
+                                Text("USA")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                                Spacer()
+                                
+                                Text("الولايات المتحدة الأمريكية")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                            }
+                            .padding()
+                            .background(.white.opacity(0.4))
+                            .cornerRadius(15)
+                            
+                            ScrollView(.horizontal) {
+                                HStack(spacing: 20) {
+                                    ForEach(USA, id: \.self){ usa in
+                                        NavigationLink(destination: Ch1View() ) {
+                                            
+                                            ZStack{
+                                                VStack{
+                                                    Image(usa)
+                                                        .resizable()
+                                                        .frame(width: 200, height: 150)
+                                                        .cornerRadius(10)
+                                                    Spacer()
+                                                    
+                                                    Text(usa)
+                                                        .foregroundColor(.black)
+                                                        .font(.custom("Amiri-Italic", size: 26))
+                                                    
+                                                    
+                                                }
+                                            }  .frame(width: 200, height: 200)
+                                                .background(.white.opacity(0.4))
+                                                .cornerRadius(10)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        VStack(spacing: 15){
+                            HStack{
+                                
+                                Text("Turkey")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                                Spacer()
+                                
+                                Text("تـركـيـا  ")
+                                    .font(.custom("Amiri-BoldItalic", size: 21))
+                                
+                            }
+                            .padding()
+                            .background(.white.opacity(0.4))
+                            .cornerRadius(15)
+                            
+                            ScrollView(.horizontal) {
+                                HStack(spacing: 20) {
+                                    ForEach(Turkey, id: \.self){ turkey in
+                                        NavigationLink(destination: Ch1View() ) {
+                                            
+                                            ZStack{
+                                                VStack{
+                                                    Image(turkey)
+                                                        .resizable()
+                                                        .frame(width: 200, height: 150)
+                                                        .cornerRadius(10)
+                                                    Spacer()
+                                                    
+                                                    Text(turkey)
+                                                        .foregroundColor(.black)
+                                                        .font(.custom("Amiri-Italic", size: 26))
+                                                    
+                                                    
+                                                }
+                                            }  .frame(width: 200, height: 200)
+                                                .background(.white.opacity(0.4))
+                                                .cornerRadius(10)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
                     }
                 }
                 Spacer()
