@@ -38,8 +38,7 @@ struct ContentView: View {
                   
                     Text("اختر خطتك")
                         .font(.custom("Amiri-BoldItalic", size: 35))
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 3)
+                        .foregroundColor(.black)
                         .frame(width: 285, height:100)
                         .background(.white.opacity(0.4))
                         .cornerRadius(25)
@@ -49,8 +48,7 @@ struct ContentView: View {
                   
                     Text("أنشئ خطتك")
                         .font(.custom("Amiri-BoldItalic", size: 35))
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 3)
+                        .foregroundColor(.black)
                         .frame(width: 285, height:100)
                         .background(.white.opacity(0.4))
                         .cornerRadius(25)
