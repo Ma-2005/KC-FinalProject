@@ -38,23 +38,7 @@ struct ChooseView: View {
                     Spacer()
                     VStack(spacing:25){
                         VStack(spacing: 10){
-                            
-                            HStack{
-                                Text("Turkey")
-                                    .font(.custom("Amiri-BoldItalic", size: 21))
-                                
-                                Spacer()
-                                
-                                Text("تـركـيـا  ")
-                                    .font(.custom("Amiri-BoldItalic", size: 21))
-                                
-                            }
-                            .foregroundColor(.black)
-                            .padding()
-                            .background(.white.opacity(0.4))
-                            .cornerRadius(15)
-                            
-                        RepoView(Plans: Plans)
+                            RepoView(Plans: Plans)
                             
                         }
                     }

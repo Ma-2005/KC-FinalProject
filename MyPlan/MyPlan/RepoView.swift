@@ -13,30 +13,53 @@ struct RepoView: View {
  
 var body: some View {
 
-        ScrollView(.horizontal) {
-            HStack(spacing: 20) {
+    VStack{
+   
+//        ScrollView(.horizontal) {
+//            HStack(spacing: 20) {
                 ForEach(Plans){ plan in
-                    NavigationLink(destination: T1View(M: plan)) {
-                        
                     
+                    HStack{
+                        Text(plan.Country)
+                            .font(.custom("Amiri-BoldItalic", size: 25))
+                        
+                        Spacer()
+                    }
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(.white.opacity(0.4))
+                    .cornerRadius(15)
+                    
+
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 20) {
+                        ForEach(plan.Places, id: \.self){ Place in
+                            NavigationLink(destination: T1View(M: plan)) {
                     ZStack{
                         VStack{
-                            Image(plan.Country)
+//                            ScrollView(.horizontal){
+//                            HStack{
+                           
+                              
+                            Image(Place)
                                 .resizable()
                                 .frame(width: 200, height: 150)
                                 .cornerRadius(10)
                             Spacer()
                         
-                            Text(plan.Country)
+                                Text(Place)
                                 .foregroundColor(.black)
                                 .font(.custom("Amiri-Italic", size: 26))
-                                
+//                                }
+//                                }
+                        }
                         }
                     }
                     .frame(width: 200, height: 200)
                     .background(.white.opacity(0.4))
                     .cornerRadius(10)
                     }
+                }
                 }
             }
         }
@@ -45,6 +68,6 @@ var body: some View {
 
 //struct RepoView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        RepoView(Turkey: constant.([""]))
+//        RepoView(Plans: PlanModel[""])
 //    }
 //}

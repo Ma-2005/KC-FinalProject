@@ -26,7 +26,7 @@ struct ContentView: View {
                     .shadow(color: .black, radius: 3)
                     .cornerRadius(25)
                 
-                Text("خطط سفرتك")
+                Text("Plan your trip")
                     .font(.custom("Amiri-BoldItalic", size: 45))
                     .padding(.horizontal)
                     .background(.white.opacity(0.4))
@@ -34,25 +34,15 @@ struct ContentView: View {
                 }
                 Spacer()
                 VStack(spacing: 45){
-                NavigationLink (destination: ChooseView()) {
-                  
-                    Text("اختر خطتك")
-                        .font(.custom("Amiri-BoldItalic", size: 35))
-                        .foregroundColor(.black)
-                        .frame(width: 285, height:100)
-                        .background(.white.opacity(0.4))
-                        .cornerRadius(25)
+                    NavigationLink (destination: ChooseView()) {
+                    TheTripView(titel: "")
+                 
                     }
-                
+                  
                 NavigationLink (destination: CreateView()) {
-                  
-                    Text("أنشئ خطتك")
-                        .font(.custom("Amiri-BoldItalic", size: 35))
-                        .foregroundColor(.black)
-                        .frame(width: 285, height:100)
-                        .background(.white.opacity(0.4))
-                        .cornerRadius(25)
-                    }
+                    TheTripView(titel: "")
+                    
+                }
                 }
                 Spacer()
                 }
@@ -65,8 +55,25 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
+                .preferredColorScheme(.dark)
                 
 
         }
+    }
+}
+
+struct  TheTripView: View {
+    
+    @State var titel : String
+    
+    var body: some View {
+       
+            Text(titel)
+                .font(.custom("Amiri-BoldItalic", size: 35))
+                .foregroundColor(.black)
+                .frame(width: 285, height:100)
+                .background(.white.opacity(0.4))
+                .cornerRadius(25)
+        
     }
 }
