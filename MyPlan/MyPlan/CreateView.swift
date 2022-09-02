@@ -20,16 +20,9 @@ struct CreateView: View {
         ZStack{
             Color("BG").ignoresSafeArea()
             VStack(spacing: 25){
-                HStack{
-                    Text("Country :")
-                    
-                    TextField("Add Country", text: $Country)
-                        .font(.custom("Amiri-Bold", size: 30))
-                        .frame(width:265, height: 75)
-                        .background()
-                        .cornerRadius(15)
-            
-                }
+                ExtractedView(title: "Country", input: Country)
+                ExtractedView(title: "Region", input: Region)
+
             }
         }
         .navigationBarTitle(Text("Create your plan"), displayMode: .inline)
@@ -42,5 +35,26 @@ struct CreateView: View {
 struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
         CreateView()
+    }
+}
+
+struct ExtractedView: View {
+    
+    @State var title : String
+    
+    @State var input : String
+    
+    var body: some View {
+        HStack{
+            Text("\(title) :")
+            
+            
+            TextField("     Add \(title)", text: $input)
+                .font(.custom("Amiri-Bold", size: 30))
+                .frame(width:265, height: 75)
+                .background()
+                .cornerRadius(15)
+            
+        }
     }
 }
