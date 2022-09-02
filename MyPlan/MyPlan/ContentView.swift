@@ -23,7 +23,6 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 150, height: 150)
                     .background(.white.opacity(0.4))
-                    .shadow(color: .black, radius: 3)
                     .cornerRadius(25)
                 
                 Text("Plan your trip")

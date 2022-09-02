@@ -30,24 +30,22 @@ var body: some View {
                     .background(.white.opacity(0.4))
                     .cornerRadius(15)
                     
-
                     ScrollView(.horizontal) {
                         HStack(spacing: 20) {
-                        ForEach(plan.Region, id: \.self){ region in
-                            NavigationLink(destination: T1View(M: plan)) {
+                        ForEach(plan.Region){ region in
+                            NavigationLink(destination: T1View(M: region)) {
                     ZStack{
                         VStack{
 //                            ScrollView(.horizontal){
 //                            HStack{
                            
-                              
-                            Image(region)
+                            Image(region.NameRegion)
                                 .resizable()
                                 .frame(width: 200, height: 150)
                                 .cornerRadius(10)
                             Spacer()
                         
-                                Text(region)
+                            Text(region.NameRegion)
                                 .foregroundColor(.black)
                                 .font(.custom("Amiri-Italic", size: 26))
 //                                }

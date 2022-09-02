@@ -13,8 +13,8 @@ struct ChooseView: View {
     
     @State var Plans = [
         
-        PlanModel(Country: "Turkey", Region: ["Istanbul","Trabzon"], Days: 7, Places: ["H1","H2","H3"]),
-        PlanModel(Country: "USA", Region: ["NewYork"], Days: 14, Places: ["H4","H5","H6","H7"])
+        PlanModel(Country: "Turkey", Region: [RegionModel(NameRegion: "Istanbul", Places: ["H1","H2"]),RegionModel(NameRegion: "Trabzon", Places: ["H3","H5"])], Days: 7),
+        PlanModel(Country: "USA", Region: [RegionModel(NameRegion: "NewYork", Places: ["H4"])], Days: 14)
 
     ]
     
@@ -24,15 +24,15 @@ struct ChooseView: View {
             Color("BG").ignoresSafeArea().opacity(1)
             VStack{
                 
-                HStack{
-                    Text("Choose the destination")
-                        .font(.custom("Amiri-BoldItalic", size: 35))
-                    Spacer()
-                    
-                    Image(systemName: "line.3.horizontal")
-                        .resizable()
-                        .frame(width: 25, height: 20)
-                }
+//                HStack{
+//                    Text("Choose the destination")
+//                        .font(.custom("Amiri-BoldItalic", size: 35))
+//                    Spacer()
+//
+//                  Image(systemName: "line.3.horizontal")
+//                       .resizable()
+//                        .frame(width: 25, height: 20)
+//                }
                 
                 ScrollView{
                     Spacer()
@@ -47,6 +47,11 @@ struct ChooseView: View {
                 
             }.padding()
         }
+//        .navigationTitle("Choose the destnation")
+        .navigationBarTitle(Text("Choose the destnation"), displayMode: .inline)
+        .navigationBarItems(trailing:   Image(systemName: "line.3.horizontal")
+            .resizable()
+            .frame(width: 25, height: 20))
     }
 }
 
