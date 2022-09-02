@@ -35,12 +35,12 @@ struct ContentView: View {
                 Spacer()
                 VStack(spacing: 45){
                     NavigationLink (destination: ChooseView()) {
-                    TheTripView(titel: "")
+                    TheTripView(titel: "Choose your plan")
                  
                     }
                   
                 NavigationLink (destination: CreateView()) {
-                    TheTripView(titel: "")
+                    TheTripView(titel: "Create Your Plan")
                     
                 }
                 }
@@ -55,7 +55,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
-                .preferredColorScheme(.dark)
+                .preferredColorScheme(.light)
                 
 
         }
