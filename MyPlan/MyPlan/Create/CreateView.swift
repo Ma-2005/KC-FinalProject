@@ -11,18 +11,24 @@ struct CreateView: View {
 
     @State var Country = ""
     @State var Region = ""
-    @State var Days = ""
+    @State var Days : Int = 0
     @State var Places = ""
-    @State var Time1 = ""
-    @State var Time2 = ""
+    @State var Slp1 = ""
+    @State var Wap2 = ""
     
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
-            VStack(spacing: 25){
+            VStack(spacing: 20){
                 ExtractedView(title: "Country", input: Country)
                 ExtractedView(title: "Region", input: Region)
-
+                HStack{
+                Stepper("Days of trip       \(Days)", value: $Days, in: 0...30)
+                    .font(.custom("Amiri-BoldItalic", size: 30))
+                    .padding(.horizontal)
+                    
+                }
+                ExtractedView(title: "Places", input: Region)
             }
         }
         .navigationBarTitle(Text("Create your plan"), displayMode: .inline)
@@ -45,16 +51,20 @@ struct ExtractedView: View {
     @State var input : String
     
     var body: some View {
-        HStack{
+        HStack(spacing: 15){
+            Spacer()
             Text("\(title) :")
-            
-            
-            TextField("     Add \(title)", text: $input)
+                .font(.custom("Amiri-BoldItalic", size: 30))
+                .frame(width:130, height: 75)
+            Spacer()
+            TextField("      \(title)", text: $input)
                 .font(.custom("Amiri-Bold", size: 30))
-                .frame(width:265, height: 75)
+                .frame(width:220, height: 75)
                 .background()
                 .cornerRadius(15)
             
         }
+        .frame(width:400, height: 75)
+
     }
 }

@@ -34,12 +34,12 @@ struct ContentView: View {
                 Spacer()
                 VStack(spacing: 45){
                     NavigationLink (destination: ChooseView()) {
-                    TheTripView(titel: "Choose your plan")
+                    TripView(titel: "Choose your plan")
                  
                     }
                   
                 NavigationLink (destination: CreateView()) {
-                    TheTripView(titel: "Create Your Plan")
+                    TripView(titel: "Create Your Plan")
                     
                 }
                 }
@@ -54,25 +54,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ContentView()
-                .preferredColorScheme(.light)
+                
                 
 
         }
     }
 }
 
-struct  TheTripView: View {
-    
-    @State var titel : String
-    
-    var body: some View {
-       
-            Text(titel)
-                .font(.custom("Amiri-BoldItalic", size: 35))
-                .foregroundColor(.black)
-                .frame(width: 285, height:100)
-                .background(.white.opacity(0.4))
-                .cornerRadius(25)
-        
-    }
-}
+

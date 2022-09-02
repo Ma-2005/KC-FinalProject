@@ -15,8 +15,10 @@
 		043D356C28BFF925007D8DA3 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D356B28BFF925007D8DA3 /* CreateView.swift */; };
 		043D357228C11006007D8DA3 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357128C11006007D8DA3 /* PlanModel.swift */; };
 		043D357428C11A17007D8DA3 /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357328C11A17007D8DA3 /* RepoView.swift */; };
-		043D357628C1227E007D8DA3 /* T1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357528C1227E007D8DA3 /* T1View.swift */; };
+		043D357628C1227E007D8DA3 /* SecChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357528C1227E007D8DA3 /* SecChooseView.swift */; };
 		043D357828C234EC007D8DA3 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357728C234EC007D8DA3 /* RegionModel.swift */; };
+		043D357A28C29370007D8DA3 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357928C29370007D8DA3 /* TripView.swift */; };
+		043D358028C29A1D007D8DA3 /* SecCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357F28C29A1D007D8DA3 /* SecCreateView.swift */; };
 		045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BD28BA2DD800CCE00D /* MyPlanApp.swift */; };
 		045563C028BA2DD800CCE00D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BF28BA2DD800CCE00D /* ContentView.swift */; };
 		045563C228BA2DD900CCE00D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045563C128BA2DD900CCE00D /* Assets.xcassets */; };
@@ -33,8 +35,10 @@
 		043D356B28BFF925007D8DA3 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		043D357128C11006007D8DA3 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
 		043D357328C11A17007D8DA3 /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
-		043D357528C1227E007D8DA3 /* T1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T1View.swift; sourceTree = "<group>"; };
+		043D357528C1227E007D8DA3 /* SecChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecChooseView.swift; sourceTree = "<group>"; };
 		043D357728C234EC007D8DA3 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
+		043D357928C29370007D8DA3 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		043D357F28C29A1D007D8DA3 /* SecCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCreateView.swift; sourceTree = "<group>"; };
 		045563BA28BA2DD800CCE00D /* MyPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045563BD28BA2DD800CCE00D /* MyPlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanApp.swift; sourceTree = "<group>"; };
 		045563BF28BA2DD800CCE00D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,42 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		043D357B28C2939F007D8DA3 /* Extract SubView */ = {
+			isa = PBXGroup;
+			children = (
+				043D357928C29370007D8DA3 /* TripView.swift */,
+				043D357328C11A17007D8DA3 /* RepoView.swift */,
+			);
+			path = "Extract SubView";
+			sourceTree = "<group>";
+		};
+		043D357C28C2947D007D8DA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				043D357128C11006007D8DA3 /* PlanModel.swift */,
+				043D357728C234EC007D8DA3 /* RegionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		043D357D28C2993A007D8DA3 /* Choose */ = {
+			isa = PBXGroup;
+			children = (
+				043D354828BD0F74007D8DA3 /* ChooseView.swift */,
+				043D357528C1227E007D8DA3 /* SecChooseView.swift */,
+			);
+			path = Choose;
+			sourceTree = "<group>";
+		};
+		043D357E28C2996C007D8DA3 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				043D356B28BFF925007D8DA3 /* CreateView.swift */,
+				043D357F28C29A1D007D8DA3 /* SecCreateView.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
 		045563B128BA2DD800CCE00D = {
 			isa = PBXGroup;
 			children = (
@@ -84,17 +124,15 @@
 			isa = PBXGroup;
 			children = (
 				043D354728BCF230007D8DA3 /* Info.plist */,
+				045563C128BA2DD900CCE00D /* Assets.xcassets */,
 				045563BD28BA2DD800CCE00D /* MyPlanApp.swift */,
 				045563BF28BA2DD800CCE00D /* ContentView.swift */,
-				043D354828BD0F74007D8DA3 /* ChooseView.swift */,
-				043D356B28BFF925007D8DA3 /* CreateView.swift */,
-				043D357128C11006007D8DA3 /* PlanModel.swift */,
-				043D357728C234EC007D8DA3 /* RegionModel.swift */,
-				045563C128BA2DD900CCE00D /* Assets.xcassets */,
+				043D357D28C2993A007D8DA3 /* Choose */,
+				043D357E28C2996C007D8DA3 /* Create */,
+				043D357B28C2939F007D8DA3 /* Extract SubView */,
+				043D357C28C2947D007D8DA3 /* Models */,
 				043D353E28BCF1D2007D8DA3 /* fonts */,
 				045563C328BA2DD900CCE00D /* Preview Content */,
-				043D357328C11A17007D8DA3 /* RepoView.swift */,
-				043D357528C1227E007D8DA3 /* T1View.swift */,
 			);
 			path = MyPlan;
 			sourceTree = "<group>";
@@ -181,6 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043D358028C29A1D007D8DA3 /* SecCreateView.swift in Sources */,
+				043D357A28C29370007D8DA3 /* TripView.swift in Sources */,
 				043D357228C11006007D8DA3 /* PlanModel.swift in Sources */,
 				045563C028BA2DD800CCE00D /* ContentView.swift in Sources */,
 				043D354928BD0F74007D8DA3 /* ChooseView.swift in Sources */,
@@ -188,7 +228,7 @@
 				045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */,
 				043D357428C11A17007D8DA3 /* RepoView.swift in Sources */,
 				043D356C28BFF925007D8DA3 /* CreateView.swift in Sources */,
-				043D357628C1227E007D8DA3 /* T1View.swift in Sources */,
+				043D357628C1227E007D8DA3 /* SecChooseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

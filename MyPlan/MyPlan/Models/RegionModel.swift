@@ -1,5 +1,5 @@
 //
-//  PlacesModel.swift
+//  RegionModel.swift
 //  MyPlan
 //
 //  Created by Mac on 02/09/2022.
@@ -12,7 +12,6 @@ struct RegionModel : Identifiable{
     let id = UUID()
     
     var NameRegion : String
-    
     var Places : [String]
     
 }

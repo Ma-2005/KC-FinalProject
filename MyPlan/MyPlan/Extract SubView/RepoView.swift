@@ -33,7 +33,7 @@ var body: some View {
                     ScrollView(.horizontal) {
                         HStack(spacing: 20) {
                         ForEach(plan.Region){ region in
-                            NavigationLink(destination: T1View(M: region)) {
+                            NavigationLink(destination: SecChooseView(M: region)) {
                     ZStack{
                         VStack{
 //                            ScrollView(.horizontal){
