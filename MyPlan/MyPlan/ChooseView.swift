@@ -13,8 +13,8 @@ struct ChooseView: View {
     
     @State var Plans = [
         
-        PlanModel(Country: "Turkey", Region: "istanbol", Days: 7, Places: ["H1","H2","H3"]),
-        PlanModel(Country: "USA", Region: "NewYork", Days: 14, Places: ["H4","H5","H6","H7"])
+        PlanModel(Country: "Turkey", Region: ["Istanbul","Trabzon"], Days: 7, Places: ["H1","H2","H3"]),
+        PlanModel(Country: "USA", Region: ["NewYork"], Days: 14, Places: ["H4","H5","H6","H7"])
 
     ]
     

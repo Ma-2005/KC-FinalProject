@@ -33,7 +33,7 @@ var body: some View {
 
                     ScrollView(.horizontal) {
                         HStack(spacing: 20) {
-                        ForEach(plan.Places, id: \.self){ Place in
+                        ForEach(plan.Region, id: \.self){ region in
                             NavigationLink(destination: T1View(M: plan)) {
                     ZStack{
                         VStack{
@@ -41,13 +41,13 @@ var body: some View {
 //                            HStack{
                            
                               
-                            Image(Place)
+                            Image(region)
                                 .resizable()
                                 .frame(width: 200, height: 150)
                                 .cornerRadius(10)
                             Spacer()
                         
-                                Text(Place)
+                                Text(region)
                                 .foregroundColor(.black)
                                 .font(.custom("Amiri-Italic", size: 26))
 //                                }

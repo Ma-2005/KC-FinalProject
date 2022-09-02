@@ -12,7 +12,7 @@ struct PlanModel: Identifiable{
     let id = UUID()
     
     var Country : String
-    var Region : String
+    var Region : [String]
     var Days : Int
     var Places : [String]
     
