@@ -13,22 +13,39 @@ struct CreateView: View {
     @State var Region = ""
     @State var Days : Int = 0
     @State var Places = ""
-    @State var Slp1 = ""
-    @State var Wap2 = ""
+    @State var Slp = ""
+    @State var Waup = ""
     
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
             VStack(spacing: 20){
-                ExtractedView(title: "Country", input: Country)
-                ExtractedView(title: "Region", input: Region)
+                listRowView(title: "Country", input: Country)
+                listRowView(title: "Region", input: Region)
                 HStack{
                 Stepper("Days of trip  :     \(Days)", value: $Days, in: 0...30)
                     .font(.custom("Amiri-BoldItalic", size: 26))
                     .padding(.horizontal)
-                    
+            
                 }
-                ExtractedView(title: "Places", input: Region)
+                
+                listRowView(title: "Places", input: Places)
+
+                
+                HStack{
+                    Spacer()
+                    
+                    timeView(title1: "Sleep", input1: Slp)
+
+                    Spacer()
+
+                    timeView(title1: "wake up", input1: Waup)
+
+                    Spacer()
+
+                }
+                .frame(width:400, height: 75)
+
             }
         }
         .navigationBarTitle(Text("Create your plan"), displayMode: .inline)
@@ -44,27 +61,5 @@ struct CreateView_Previews: PreviewProvider {
     }
 }
 
-struct ExtractedView: View {
-    
-    @State var title : String
-    
-    @State var input : String
-    
-    var body: some View {
-        HStack(spacing: 15){
-            Spacer()
-            Text("\(title) :")
-                .font(.custom("Amiri-BoldItalic", size: 26))
-                .frame(width:130, height: 75)
-            Spacer()
-            TextField("      \(title)", text: $input)
-                .font(.custom("Amiri-Bold", size: 26))
-                .frame(width:220, height: 75)
-                .background()
-                .cornerRadius(15)
-            
-        }
-        .frame(width:400, height: 75)
 
-    }
-}
+

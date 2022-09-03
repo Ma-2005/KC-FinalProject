@@ -11,7 +11,7 @@ struct RegionModel : Identifiable{
     let id = UUID()
     
     var NameRegion : String
-    var Places : [String]
+    var Places : [PlaceModel]
     
 }
 

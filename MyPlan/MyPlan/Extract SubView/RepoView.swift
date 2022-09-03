@@ -25,15 +25,12 @@ var body: some View {
                         
                         Spacer()
                     }
-                    .foregroundColor(.black)
-                    .padding()
-                    .background(.white.opacity(0.4))
-                    .cornerRadius(15)
+                    .modifier(MoodTextView())
                     
                     ScrollView(.horizontal) {
                         HStack(spacing: 20) {
                         ForEach(plan.Region){ region in
-                            NavigationLink(destination: SecChooseView(M: region)) {
+                            NavigationLink( destination: SecChooseView(C: region, M: PlaceModel(Name: "M", Information: "M", timesOpen: "q"))) {
                     ZStack{
                         VStack{
 //                            ScrollView(.horizontal){

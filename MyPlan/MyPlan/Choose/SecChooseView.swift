@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SecChooseView: View {
     
-    var M : RegionModel
+    var C : RegionModel
+    
+    var M : PlaceModel
     
     @State var place = false
     
@@ -18,15 +20,17 @@ struct SecChooseView: View {
         ZStack{
             
             Color("BG").ignoresSafeArea()
-            VStack{
+            VStack {
                 ZStack{
-                    Image(M.NameRegion)
+                    Image(C.NameRegion)
                         .resizable()
                         .scaledToFit()
+    //                        .frame(width: .infinity ,height: 300, alignment: .center)
                         .ignoresSafeArea()
+                       
                     HStack{
                         Spacer()
-                        Text(M.NameRegion)
+                        Text(C.NameRegion)
                             .font(.custom("Amiri-BoldItalic", size: 25))
                             .foregroundColor(.black)
                             .padding()
@@ -34,6 +38,10 @@ struct SecChooseView: View {
                             .cornerRadius(15)
                     }
                 }
+                Spacer()
+            }
+            VStack{
+                Spacer()
                 VStack{
                     HStack{
                       Text("Places")
@@ -48,45 +56,47 @@ struct SecChooseView: View {
                     
                     ScrollView(.horizontal){
                     HStack{
-                        ForEach(M.Places, id: \.self){ Place in
-                                ZStack{
-                                    VStack{
-
-                                        Image(Place)
-                                            .resizable()
-                                            .frame(width: 200, height: 150)
-                                            .cornerRadius(10)
-                                    
-                                        Text(Place)
-                                            .foregroundColor(.black)
-                                            .font(.custom("Amiri-Italic", size: 26))
-
-                                    }
-                                    }
-                                .frame(width: 200, height: 200)
-                                .background(.white.opacity(0.4))
-                                .cornerRadius(10)
-                                .onTapGesture {
-                                    place.toggle()
-                                }
-                                .sheet(isPresented: $place){
-                                    ThirdView()
-                                }
-                            }
+//                        ForEach(C.Places){ Place in
+//                                ZStack{
+//                                    VStack{
+//
+//                                        Image(Place)
+//                                            .resizable()
+//                                            .frame(width: 200, height: 150)
+//                                            .cornerRadius(10)
+//                                    
+//                                        Text(Place)
+//                                            .foregroundColor(.black)
+//                                            .font(.custom("Amiri-Italic", size: 26))
+//
+//                                    }
+//                                    }
+//                                .frame(width: 200, height: 200)
+//                                .background(.white.opacity(0.4))
+//                                .cornerRadius(10)
+//                                .onTapGesture {
+//                                    place.toggle()
+//                                }
+//                                .sheet(isPresented: $place){
+//                                    ThirdView(PlaceInfo: PlaceModel(Name: "Bosphorus", Information: "m"))
+//                                }
+//                            }
                         }
                     }
-                    
-                Spacer()
                     }
+                Spacer()
             }
 
             }
+//        .navigationBarHidden(true)
         }
     }
 
 
-//struct T1View_Previews: PreviewProvider {
+//struct SecChooseView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        T1View()
+//       NavigationView {
+//        SecChooseView(C: RegionModel(NameRegion: "m", Places: "n"), M: PlaceModel(Name: "Dubai", Information: "."))
+//        }
 //    }
 //}
