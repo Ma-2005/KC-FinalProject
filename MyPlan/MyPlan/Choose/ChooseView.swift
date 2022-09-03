@@ -13,8 +13,11 @@ struct ChooseView: View {
     
     @State var Plans = [
         
-        PlanModel(Country: "Turkey", Region: [RegionModel(NameRegion: "Istanbul", Places: ["H1","H2"]),RegionModel(NameRegion: "Trabzon", Places: ["H3","H5"])], Days: 7),
-        PlanModel(Country: "USA", Region: [RegionModel(NameRegion: "NewYork", Places: ["H4"])], Days: 14)
+        PlanModel(Country: "Turkey", Region: [RegionModel(NameRegion: "Istanbul", Places: ["H1","H2"]),RegionModel(NameRegion: "Antalya", Places: ["H3","H4"])], Days: 7),
+        
+        PlanModel(Country: "UAE", Region: [RegionModel(NameRegion: "Dubai", Places: ["H7","H8"]),RegionModel(NameRegion: "Abu Dhabi", Places: ["H7","H8"])], Days: 14),
+    
+        PlanModel(Country: "USA", Region: [RegionModel(NameRegion: "NewYork", Places: ["H5","H6"])], Days: 14)
 
     ]
     
@@ -52,6 +55,7 @@ struct ChooseView: View {
         .navigationBarItems(trailing:   Image(systemName: "line.3.horizontal")
             .resizable()
             .frame(width: 25, height: 20))
+        
     }
 }
 

@@ -19,6 +19,9 @@
 		043D357828C234EC007D8DA3 /* RegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357728C234EC007D8DA3 /* RegionModel.swift */; };
 		043D357A28C29370007D8DA3 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357928C29370007D8DA3 /* TripView.swift */; };
 		043D358028C29A1D007D8DA3 /* SecCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D357F28C29A1D007D8DA3 /* SecCreateView.swift */; };
+		043D358428C33AD0007D8DA3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D358328C33AD0007D8DA3 /* ProfileView.swift */; };
+		043D358628C33FA7007D8DA3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D358528C33FA7007D8DA3 /* HomeView.swift */; };
+		043D358828C390F0007D8DA3 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D358728C390F0007D8DA3 /* ThirdView.swift */; };
 		045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BD28BA2DD800CCE00D /* MyPlanApp.swift */; };
 		045563C028BA2DD800CCE00D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BF28BA2DD800CCE00D /* ContentView.swift */; };
 		045563C228BA2DD900CCE00D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045563C128BA2DD900CCE00D /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		043D357728C234EC007D8DA3 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
 		043D357928C29370007D8DA3 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		043D357F28C29A1D007D8DA3 /* SecCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCreateView.swift; sourceTree = "<group>"; };
+		043D358328C33AD0007D8DA3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		043D358528C33FA7007D8DA3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		043D358728C390F0007D8DA3 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		045563BA28BA2DD800CCE00D /* MyPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045563BD28BA2DD800CCE00D /* MyPlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanApp.swift; sourceTree = "<group>"; };
 		045563BF28BA2DD800CCE00D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			children = (
 				043D354828BD0F74007D8DA3 /* ChooseView.swift */,
 				043D357528C1227E007D8DA3 /* SecChooseView.swift */,
+				043D358728C390F0007D8DA3 /* ThirdView.swift */,
 			);
 			path = Choose;
 			sourceTree = "<group>";
@@ -127,6 +134,8 @@
 				045563C128BA2DD900CCE00D /* Assets.xcassets */,
 				045563BD28BA2DD800CCE00D /* MyPlanApp.swift */,
 				045563BF28BA2DD800CCE00D /* ContentView.swift */,
+				043D358528C33FA7007D8DA3 /* HomeView.swift */,
+				043D358328C33AD0007D8DA3 /* ProfileView.swift */,
 				043D357D28C2993A007D8DA3 /* Choose */,
 				043D357E28C2996C007D8DA3 /* Create */,
 				043D357B28C2939F007D8DA3 /* Extract SubView */,
@@ -220,8 +229,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				043D358028C29A1D007D8DA3 /* SecCreateView.swift in Sources */,
+				043D358828C390F0007D8DA3 /* ThirdView.swift in Sources */,
+				043D358628C33FA7007D8DA3 /* HomeView.swift in Sources */,
 				043D357A28C29370007D8DA3 /* TripView.swift in Sources */,
 				043D357228C11006007D8DA3 /* PlanModel.swift in Sources */,
+				043D358428C33AD0007D8DA3 /* ProfileView.swift in Sources */,
 				045563C028BA2DD800CCE00D /* ContentView.swift in Sources */,
 				043D354928BD0F74007D8DA3 /* ChooseView.swift in Sources */,
 				043D357828C234EC007D8DA3 /* RegionModel.swift in Sources */,

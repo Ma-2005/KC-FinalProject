@@ -8,7 +8,6 @@
 import Foundation
 
 struct RegionModel : Identifiable{
-    
     let id = UUID()
     
     var NameRegion : String

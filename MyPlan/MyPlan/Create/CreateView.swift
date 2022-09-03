@@ -23,8 +23,8 @@ struct CreateView: View {
                 ExtractedView(title: "Country", input: Country)
                 ExtractedView(title: "Region", input: Region)
                 HStack{
-                Stepper("Days of trip       \(Days)", value: $Days, in: 0...30)
-                    .font(.custom("Amiri-BoldItalic", size: 30))
+                Stepper("Days of trip  :     \(Days)", value: $Days, in: 0...30)
+                    .font(.custom("Amiri-BoldItalic", size: 26))
                     .padding(.horizontal)
                     
                 }
@@ -54,11 +54,11 @@ struct ExtractedView: View {
         HStack(spacing: 15){
             Spacer()
             Text("\(title) :")
-                .font(.custom("Amiri-BoldItalic", size: 30))
+                .font(.custom("Amiri-BoldItalic", size: 26))
                 .frame(width:130, height: 75)
             Spacer()
             TextField("      \(title)", text: $input)
-                .font(.custom("Amiri-Bold", size: 30))
+                .font(.custom("Amiri-Bold", size: 26))
                 .frame(width:220, height: 75)
                 .background()
                 .cornerRadius(15)
