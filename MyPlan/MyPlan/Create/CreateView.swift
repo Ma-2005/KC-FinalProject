@@ -13,6 +13,9 @@ struct CreateView: View {
     @State var Region = ""
     @State var Days : Int = 0
     @State var Places = ""
+    
+    @State var Plcs = []
+    
     @State var Slp = ""
     @State var Waup = ""
     @State var ShowMenu : Bool = false
@@ -30,9 +33,29 @@ struct CreateView: View {
                     .padding(.horizontal)
             
                 }
-                
+                HStack{
                 listRowView(title: "Places", input: Places)
 
+                    Button {
+
+                        Plcs.append(CreatePlcsModel(PlName: Places))
+
+                    } label: {
+                        Image(systemName: "plus.app.fill")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(.black)
+                    }
+                }
+                
+//                ScrollView(.horizontal) {
+//                    HStack(spacing: 20) {
+//                        ForEach(Plcs){ r in
+//                            Text(r.PlName)
+//
+//                        }
+//                    }
+//                }
                 
 //                HStack{
 //                    Spacer()

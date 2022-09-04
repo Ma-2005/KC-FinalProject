@@ -78,7 +78,7 @@ struct SecChooseView: View {
                                     place.toggle()
                                 }
                                 .sheet(isPresented: $place){
-                                    ThirdView(PlaceInfo: PlaceModel(Name: "B", Information: "m", timesOpen: "M"))
+                                    ThirdView(PlaceInfo: PlaceModel(Name: P.Name, Information: P.Information, timesOpen: P.timesOpen))
                                 }
                             }
                         }
