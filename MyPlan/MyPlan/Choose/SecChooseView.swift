@@ -56,31 +56,31 @@ struct SecChooseView: View {
                     
                     ScrollView(.horizontal){
                     HStack{
-//                        ForEach(C.Places){ Place in
-//                                ZStack{
-//                                    VStack{
-//
-//                                        Image(Place)
-//                                            .resizable()
-//                                            .frame(width: 200, height: 150)
-//                                            .cornerRadius(10)
-//
-//                                        Text(Place)
-//                                            .foregroundColor(.black)
-//                                            .font(.custom("Amiri-Italic", size: 26))
-//
-//                                    }
-//                                    }
-//                                .frame(width: 200, height: 200)
-//                                .background(.white.opacity(0.4))
-//                                .cornerRadius(10)
-//                                .onTapGesture {
-//                                    place.toggle()
-//                                }
-//                                .sheet(isPresented: $place){
-//                                    ThirdView(PlaceInfo: PlaceModel(Name: "B", Information: "m", timesOpen: "M"))
-//                                }
-//                            }
+                        ForEach(C.Places){ P in
+                                ZStack{
+                                    VStack{
+
+                                        Image(P.Name)
+                                            .resizable()
+                                            .frame(width: 200, height: 150)
+                                            .cornerRadius(10)
+
+                                        Text(P.Name)
+                                            .foregroundColor(.black)
+                                            .font(.custom("Amiri-Italic", size: 26))
+
+                                    }
+                                    }
+                                .frame(width: 200, height: 200)
+                                .background(.white.opacity(0.4))
+                                .cornerRadius(10)
+                                .onTapGesture {
+                                    place.toggle()
+                                }
+                                .sheet(isPresented: $place){
+                                    ThirdView(PlaceInfo: PlaceModel(Name: "B", Information: "m", timesOpen: "M"))
+                                }
+                            }
                         }
                     }
                     }
