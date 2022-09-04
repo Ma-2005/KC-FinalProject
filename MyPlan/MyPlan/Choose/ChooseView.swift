@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChooseView: View {
     
-   
+    @State var ShowMenu : Bool = false
     
     var body: some View {
         
@@ -39,12 +39,45 @@ struct ChooseView: View {
                 Spacer()
                 
             }.padding()
+            
+            GeometryReader { _ in
+              
+              HStack {
+                Spacer()
+                
+                SideMenuView()
+                  .offset(x: ShowMenu ? 0 : UIScreen.main.bounds.width)
+                  .animation(.easeInOut(duration: 0.4), value: ShowMenu)
+              }
+              
+            }
+            .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
         }
 //        .navigationTitle("Choose the destnation")
         .navigationBarTitle(Text("Choose the destnation"), displayMode: .inline)
-        .navigationBarItems(trailing:   Image(systemName: "line.3.horizontal")
-            .resizable()
-            .frame(width: 25, height: 20))
+        .toolbar {
+          
+          Button {
+            self.ShowMenu.toggle()
+          } label: {
+            
+            if ShowMenu {
+              
+              Image(systemName: "xmark")
+                .resizable()
+                .frame(width: 25, height: 20)
+                .foregroundColor(.black)
+                
+            } else {
+              Image(systemName: "line.3.horizontal")
+                .resizable()
+                .frame(width: 25, height: 20)
+                .foregroundColor(.black)
+                
+            }
+            
+          }
+        }
         
     }
 }

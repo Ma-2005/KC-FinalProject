@@ -26,6 +26,9 @@
 		043D358C28C4011D007D8DA3 /* MoodTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D358B28C4011C007D8DA3 /* MoodTextView.swift */; };
 		043D358F28C4053E007D8DA3 /* listRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D358E28C4053E007D8DA3 /* listRowView.swift */; };
 		043D359128C41141007D8DA3 /* timeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D359028C41141007D8DA3 /* timeView.swift */; };
+		043D359328C46FBF007D8DA3 /* MyPlansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D359228C46FBF007D8DA3 /* MyPlansView.swift */; };
+		043D359928C48DEA007D8DA3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D359828C48DEA007D8DA3 /* SideMenuView.swift */; };
+		043D359B28C49913007D8DA3 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D359A28C49913007D8DA3 /* MenuView.swift */; };
 		045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BD28BA2DD800CCE00D /* MyPlanApp.swift */; };
 		045563C028BA2DD800CCE00D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BF28BA2DD800CCE00D /* ContentView.swift */; };
 		045563C228BA2DD900CCE00D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045563C128BA2DD900CCE00D /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		043D358B28C4011C007D8DA3 /* MoodTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTextView.swift; sourceTree = "<group>"; };
 		043D358E28C4053E007D8DA3 /* listRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listRowView.swift; sourceTree = "<group>"; };
 		043D359028C41141007D8DA3 /* timeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeView.swift; sourceTree = "<group>"; };
+		043D359228C46FBF007D8DA3 /* MyPlansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlansView.swift; sourceTree = "<group>"; };
+		043D359828C48DEA007D8DA3 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		043D359A28C49913007D8DA3 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		045563BA28BA2DD800CCE00D /* MyPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045563BD28BA2DD800CCE00D /* MyPlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanApp.swift; sourceTree = "<group>"; };
 		045563BF28BA2DD800CCE00D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 				043D357328C11A17007D8DA3 /* RepoView.swift */,
 				043D358E28C4053E007D8DA3 /* listRowView.swift */,
 				043D359028C41141007D8DA3 /* timeView.swift */,
+				043D359A28C49913007D8DA3 /* MenuView.swift */,
 			);
 			path = "Extract SubView";
 			sourceTree = "<group>";
@@ -154,7 +161,9 @@
 				045563BD28BA2DD800CCE00D /* MyPlanApp.swift */,
 				045563BF28BA2DD800CCE00D /* ContentView.swift */,
 				043D358528C33FA7007D8DA3 /* HomeView.swift */,
+				043D359228C46FBF007D8DA3 /* MyPlansView.swift */,
 				043D358328C33AD0007D8DA3 /* ProfileView.swift */,
+				043D359828C48DEA007D8DA3 /* SideMenuView.swift */,
 				043D357D28C2993A007D8DA3 /* Choose */,
 				043D357E28C2996C007D8DA3 /* Create */,
 				043D357B28C2939F007D8DA3 /* Extract SubView */,
@@ -252,6 +261,8 @@
 				043D358C28C4011D007D8DA3 /* MoodTextView.swift in Sources */,
 				043D358828C390F0007D8DA3 /* ThirdView.swift in Sources */,
 				043D358628C33FA7007D8DA3 /* HomeView.swift in Sources */,
+				043D359928C48DEA007D8DA3 /* SideMenuView.swift in Sources */,
+				043D359B28C49913007D8DA3 /* MenuView.swift in Sources */,
 				043D357A28C29370007D8DA3 /* TripView.swift in Sources */,
 				043D357228C11006007D8DA3 /* PlanModel.swift in Sources */,
 				043D358428C33AD0007D8DA3 /* ProfileView.swift in Sources */,
@@ -259,6 +270,7 @@
 				045563C028BA2DD800CCE00D /* ContentView.swift in Sources */,
 				043D354928BD0F74007D8DA3 /* ChooseView.swift in Sources */,
 				043D357828C234EC007D8DA3 /* RegionModel.swift in Sources */,
+				043D359328C46FBF007D8DA3 /* MyPlansView.swift in Sources */,
 				045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */,
 				043D358F28C4053E007D8DA3 /* listRowView.swift in Sources */,
 				043D357428C11A17007D8DA3 /* RepoView.swift in Sources */,

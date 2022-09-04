@@ -15,10 +15,12 @@ struct CreateView: View {
     @State var Places = ""
     @State var Slp = ""
     @State var Waup = ""
-    
+    @State var ShowMenu : Bool = false
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
+            
+            
             VStack(spacing: 20){
                 listRowView(title: "Country", input: Country)
                 listRowView(title: "Region", input: Region)
@@ -32,26 +34,57 @@ struct CreateView: View {
                 listRowView(title: "Places", input: Places)
 
                 
-                HStack{
-                    Spacer()
-                    
-                    timeView(title1: "Sleep", input1: Slp)
-
-                    Spacer()
-
-                    timeView(title1: "wake up", input1: Waup)
-
-                    Spacer()
-
-                }
-                .frame(width:400, height: 75)
+//                HStack{
+//                    Spacer()
+//
+//                    timeView(title1: "Sleep", input1: Slp)
+//
+//                    Spacer()
+//
+//                    timeView(title1: "wake up", input1: Waup)
+//
+//                    Spacer()
+//
+//                }
+//                .frame(width:400, height: 75)
 
             }
+            GeometryReader { _ in
+              
+              HStack {
+                Spacer()
+                
+                SideMenuView()
+                  .offset(x: ShowMenu ? 0 : UIScreen.main.bounds.width)
+                  .animation(.easeInOut(duration: 0.4), value: ShowMenu)
+              }
+              
+            }
+            .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
         }
         .navigationBarTitle(Text("Create your plan"), displayMode: .inline)
-        .navigationBarItems(trailing:   Image(systemName: "line.3.horizontal")
-            .resizable()
-            .frame(width: 25, height: 20))
+        .toolbar {
+          
+          Button {
+            self.ShowMenu.toggle()
+          } label: {
+            
+            if ShowMenu {
+              
+              Image(systemName: "xmark")
+                .resizable()
+                .frame(width: 25, height: 20)
+                .foregroundColor(.black)
+                
+            } else {
+              Image(systemName: "line.3.horizontal")
+                .resizable()
+                .frame(width: 25, height: 20)
+                .foregroundColor(.black)
+                
+            }
+          }
+        }
     }
 }
 

@@ -11,6 +11,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
+            MyPlansView()
+                .tabItem {
+                    Label("MyPlans", systemImage: "list.bullet.rectangle.portrait.fill")
+            
+                }
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")

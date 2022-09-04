@@ -25,10 +25,7 @@ struct ThirdView: View {
                         Spacer()
                         Text(PlaceInfo.Name)
                             .font(.custom("Amiri-BoldItalic", size: 25))
-                            .foregroundColor(.black)
-                            .padding()
-                            .background(.white.opacity(0.4))
-                            .cornerRadius(15)
+                            .modifier(MoodTextView())
                     }
                 }
                
@@ -41,15 +38,23 @@ struct ThirdView: View {
                 }
                 .padding()
                 
+                HStack {
+                    Text(PlaceInfo.timesOpen)
+                        .font(.custom("Amiri-Reguler", size: 20))
+                    .modifier(MoodTextView())
+                    
+                    Spacer()
+                }.padding()
+                
                 Spacer()
             }
         }
-        
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct ThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        ThirdView(PlaceInfo: PlaceModel(Name: "Bosphorus", Information: "   The Bosphorus Strait or Bosporus Strait is a natural strait and an internationally significant waterway located in northwestern Turkey. It forms part of the continental boundary between Asia and Europe, and divides Turkey by separating Anatolia from Thrace.", timesOpen: "m"))
+        ThirdView(PlaceInfo: PlaceModel(Name: "The Maiden's Tower", Information: "The Maiden's Tower (Turkish: Kız Kulesi), also known as Leander's Tower (Tower of Leandros) since the medieval Byzantine period, is a tower on a small islet at the southern entrance of the Bosphorus strait, 200 m (220 yd) from the coast of Üsküdar in Istanbul, Turkey.", timesOpen: "Temporarily closed"))
     }
 }

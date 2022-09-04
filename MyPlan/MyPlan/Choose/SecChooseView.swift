@@ -64,7 +64,7 @@ struct SecChooseView: View {
 //                                            .resizable()
 //                                            .frame(width: 200, height: 150)
 //                                            .cornerRadius(10)
-//                                    
+//
 //                                        Text(Place)
 //                                            .foregroundColor(.black)
 //                                            .font(.custom("Amiri-Italic", size: 26))
@@ -78,7 +78,7 @@ struct SecChooseView: View {
 //                                    place.toggle()
 //                                }
 //                                .sheet(isPresented: $place){
-//                                    ThirdView(PlaceInfo: PlaceModel(Name: "Bosphorus", Information: "m"))
+//                                    ThirdView(PlaceInfo: PlaceModel(Name: "B", Information: "m", timesOpen: "M"))
 //                                }
 //                            }
                         }
@@ -88,6 +88,7 @@ struct SecChooseView: View {
             }
 
             }
+        .edgesIgnoringSafeArea(.all)
 //        .navigationBarHidden(true)
         }
     }
