@@ -17,12 +17,12 @@ struct listRowView: View {
         HStack(spacing: 15){
             Spacer()
             Text("\(title) :")
-                .font(.custom("Amiri-BoldItalic", size: 26))
-                .frame(width:130, height: 75)
+                .font(.custom("Amiri-BoldItalic", size: 24))
+                .frame(width:100, height: 60)
             Spacer()
             TextField("      \(title)", text: $input)
                 .font(.custom("Amiri-Bold", size: 26))
-                .frame(width:220, height: 75)
+                .frame(width:200, height: 60)
                 .background()
                 .cornerRadius(15)
             

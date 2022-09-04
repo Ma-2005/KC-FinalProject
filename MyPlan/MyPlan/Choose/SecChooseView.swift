@@ -13,6 +13,8 @@ struct SecChooseView: View {
     
     var M : PlaceModel
     
+    @State var PInfo = PlaceModel(Name: "", Information: "", timesOpen: "")
+    
     @State var place = false
     
     var body: some View {
@@ -75,20 +77,20 @@ struct SecChooseView: View {
                                 .background(.white.opacity(0.4))
                                 .cornerRadius(10)
                                 .onTapGesture {
+                                    PInfo = P
                                     place.toggle()
                                 }
-                                .sheet(isPresented: $place){
-                                    ThirdView(PlaceInfo: PlaceModel(Name: P.Name, Information: P.Information, timesOpen: P.timesOpen))
-                                }
+                                
                             }
                         }
                     }
                     }
                 Spacer()
             }
-
+            }.edgesIgnoringSafeArea(.all)
+            .sheet(isPresented: $place){
+                ThirdView(PlaceInfo: $PInfo)
             }
-        .edgesIgnoringSafeArea(.all)
 //        .navigationBarHidden(true)
         }
     }

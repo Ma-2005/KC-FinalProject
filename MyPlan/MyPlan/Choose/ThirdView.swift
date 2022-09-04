@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ThirdView: View {
     
-    var PlaceInfo : PlaceModel
+    @Binding var PlaceInfo : PlaceModel
     
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
+            
             VStack{
                 ZStack{
                 Image(PlaceInfo.Name)
@@ -53,8 +54,8 @@ struct ThirdView: View {
     }
 }
 
-struct ThirdView_Previews: PreviewProvider {
-    static var previews: some View {
-        ThirdView(PlaceInfo: PlaceModel(Name: "The Maiden's Tower", Information: "The Maiden's Tower (Turkish: Kız Kulesi), also known as Leander's Tower (Tower of Leandros) since the medieval Byzantine period, is a tower on a small islet at the southern entrance of the Bosphorus strait, 200 m (220 yd) from the coast of Üsküdar in Istanbul, Turkey.", timesOpen: "Temporarily closed"))
-    }
-}
+//struct ThirdView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThirdView(PlaceInfo: PlaceModel(Name: "The Maiden's Tower", Information: "The Maiden's Tower (Turkish: Kız Kulesi), also known as Leander's Tower (Tower of Leandros) since the medieval Byzantine period, is a tower on a small islet at the southern entrance of the Bosphorus strait, 200 m (220 yd) from the coast of Üsküdar in Istanbul, Turkey.", timesOpen: "Temporarily closed"))
+//    }
+//}
