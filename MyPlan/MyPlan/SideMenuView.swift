@@ -43,7 +43,9 @@ struct SideMenuView: View {
                     NavigationLink (destination: MyPlansView()) {
                         MenuView(PageName: "My Plans", IconName: "list.bullet.rectangle.portrait.fill")
                     }
-                    
+                        NavigationLink (destination: LoginView()) {
+                            MenuView(PageName: "Log in", IconName: "person.fill")
+                        }
                     }.foregroundColor(.black)
                 }
             
@@ -54,6 +56,7 @@ struct SideMenuView: View {
         .frame(width: 250)
         .background(Color("BG"))
         .edgesIgnoringSafeArea(.bottom)
+        .navigationBarBackButtonHidden(true)
     }
 }
 

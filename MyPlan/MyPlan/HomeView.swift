@@ -17,9 +17,7 @@ struct HomeView: View {
         ZStack{
             Color("BG").ignoresSafeArea()
             VStack(spacing: 38){
-                HStack{
-                    
-                }
+
                 VStack(spacing: 15){
                 Image("logo")
                     .resizable()
@@ -84,7 +82,7 @@ struct HomeView: View {
             }
         }
     }
-}
+}.navigationBarBackButtonHidden(true)
     }
         }
 

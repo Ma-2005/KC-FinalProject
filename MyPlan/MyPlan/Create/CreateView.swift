@@ -23,6 +23,9 @@ struct CreateView: View {
     @State var ShowMenu : Bool = false
     @State private var ShowAlert = false
     @State var ShowSecCreateView = false
+    
+    @State var alertIsShown = false
+    @State var MyNavigate = false
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
@@ -119,6 +122,10 @@ struct CreateView: View {
                     }
                 }
             }
+            NavigationLink(destination: SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $MyNavigate){
+                EmptyView()
+            }
+            
             GeometryReader { _ in
                 
                 HStack {
@@ -137,6 +144,7 @@ struct CreateView: View {
             
             Button {
                 self.ShowMenu.toggle()
+                
             } label: {
                 
                 if ShowMenu {
@@ -174,7 +182,8 @@ struct CreateView: View {
         
         ListArray.append(MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note))
         
-//        NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView){}
+        MyNavigate.toggle()
+//       NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView){}
         
     }
 }

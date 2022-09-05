@@ -18,8 +18,11 @@ struct SecCreateView: View {
             VStack(spacing:12){
                 
                 ExtractedView(TextIn: "Country : \(ShowPlan.MyCountry)")
+                
                 ExtractedView(TextIn: "Region : \(ShowPlan.MyRegion)")
+                
                 ExtractedView(TextIn: "Days : \(ShowPlan.MyDays)")
+                
                 ExtractedView(TextIn: "Places : \(ShowPlan.MyPlaces)")
                 
 
