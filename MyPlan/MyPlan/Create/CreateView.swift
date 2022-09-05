@@ -17,8 +17,12 @@ struct CreateView: View {
     @State var Plcs: [String] = []
     
     @State var Note = ""
+
+    @State var ListArray = []
     
     @State var ShowMenu : Bool = false
+    @State private var ShowAlert = false
+    @State var ShowSecCreateView = false
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
@@ -27,9 +31,9 @@ struct CreateView: View {
             ScrollView {
                 VStack(spacing: 20){
                     
-                    Text("Write your plan")
-                        .font(.custom("Amiri-BoldItalic", size: 24))
-                        .modifier(MoodTextView())
+//                    Text("Write your plan")
+//                        .font(.custom("Amiri-BoldItalic", size: 24))
+//                        .modifier(MoodTextView())
                     
                     listRowView(title: "Country", input: Country)
                     listRowView(title: "Region", input: Region)
@@ -70,7 +74,7 @@ struct CreateView: View {
                             HStack(spacing: 20) {
                                 ForEach(Plcs, id: \.self){ P in
                                     
-                                    Text("\(P) -")
+                                    Text("\(P)  ")
                                     
                                 }
                             }
@@ -101,9 +105,15 @@ struct CreateView: View {
                         }.padding()
                         
                         Button {
+                            ShowAlert = true
                             
                         } label: {
-                            
+                            Text("Submit")
+                                .font(.custom("Amiri-Bold", size: 32))
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(.black)
+                                .cornerRadius(18)
                         }
 
                     }
@@ -145,6 +155,27 @@ struct CreateView: View {
                 }
             }
         }
+        .alert("Done", isPresented: $ShowAlert) {
+            
+//            NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView)
+            
+                Button("Continue", role: .destructive, action: goSecond )
+                Button("Cancel", role: .cancel){}
+
+        }message: {
+            Text("See Your Plan")
+        }
+ 
+       
+    }
+    func goSecond() {
+        
+        ShowSecCreateView = true
+        
+        ListArray.append(MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note))
+        
+//        NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView){}
+        
     }
 }
 

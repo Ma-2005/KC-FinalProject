@@ -10,22 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        TabView {
-            MyPlansView()
-                .tabItem {
-                    Label("MyPlans", systemImage: "list.bullet.rectangle.portrait.fill")
+        ZStack{
             
-                }
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                    
-                      }
-            ProfileView()
-                .tabItem {
-                    Label("Profile", systemImage: "person.crop.circle")
-                    
-              }
         }
     }
 }
