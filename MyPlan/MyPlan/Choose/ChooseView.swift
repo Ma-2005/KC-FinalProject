@@ -54,7 +54,7 @@ struct ChooseView: View {
             .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
         }
 //        .navigationTitle("Choose the destnation")
-        .navigationBarTitle(Text("Choose the destnation"), displayMode: .inline)
+        .navigationBarTitle(ShowMenu ? "" : "Choose the destnation", displayMode: .inline)
         .toolbar {
           
           Button {

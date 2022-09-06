@@ -43,8 +43,16 @@ struct SideMenuView: View {
                     NavigationLink (destination: MyPlansView()) {
                         MenuView(PageName: "My Plans", IconName: "list.bullet.rectangle.portrait.fill")
                     }
+                        Spacer()
                         NavigationLink (destination: LoginView()) {
-                            MenuView(PageName: "Log in", IconName: "person.fill")
+                            HStack(spacing: 20){
+                                Text("Log In")
+                                    .fontWeight(.bold)
+//                                    .underline()
+                                    .frame(width: 200, height: 50, alignment: .leading)
+                                    
+                            }
+                            .frame(width: 200, height: 50)
                         }
                     }.foregroundColor(.black)
                 }

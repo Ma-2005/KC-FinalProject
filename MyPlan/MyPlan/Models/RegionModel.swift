@@ -15,3 +15,4 @@ struct RegionModel : Identifiable{
     
 }
 
+var MyReadyPlans : [RegionModel] = []

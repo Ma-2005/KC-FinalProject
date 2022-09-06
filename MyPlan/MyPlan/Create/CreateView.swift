@@ -17,11 +17,11 @@ struct CreateView: View {
     @State var Note = ""
     
     @State var ShowMenu : Bool = false
-    @State private var ShowAlert = false
-    @State var ShowSecCreateView = false
     
-    @State var alertIsShown = false
+    @State var ShowSecCreateView = false
+    @State private var ShowAlert = false
     @State var MyNavigate = false
+    
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
@@ -190,7 +190,7 @@ struct CreateView: View {
                 }
             }
         }
-        .alert("Done", isPresented: $ShowAlert) {
+        .alert("Save Your Plan !!", isPresented: $ShowAlert) {
             
             //            NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView)
             
