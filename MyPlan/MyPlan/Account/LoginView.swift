@@ -101,13 +101,12 @@ struct LoginView: View {
                                 .frame(width: 285, height:100)
                                 .background(.white.opacity(0.4))
                                 .cornerRadius(25)
+                                
                         }
                         
                         Spacer()
                     }
                 }
-                
-                
                 
                 Spacer()
             }

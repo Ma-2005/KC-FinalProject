@@ -9,16 +9,12 @@ import SwiftUI
 
 struct CreateView: View {
     
+    @State var MyPlanName = ""
     @State var Country = ""
     @State var Region = ""
     @State var Days : Int = 0
     @State var Places = ""
-    
-    @State var Plcs: [String] = []
-    
     @State var Note = ""
-
-    @State var ListArray = []
     
     @State var ShowMenu : Bool = false
     @State private var ShowAlert = false
@@ -33,25 +29,49 @@ struct CreateView: View {
             
             ScrollView {
                 VStack(spacing: 20){
-                    
-//                    Text("Write your plan")
-//                        .font(.custom("Amiri-BoldItalic", size: 24))
-//                        .modifier(MoodTextView())
-                    
-                    listRowView(title: "Country", input: Country)
-                    listRowView(title: "Region", input: Region)
+                    VStack{
+                        HStack{
+                            Text("Write Name for your Plan")
+                                .font(.custom("Amiri-BoldItalic", size: 24))
+                                .frame(height: 25)
+                                .modifier(MoodTextView())
+                            
+                        }
+                        HStack{
+                            TextField("    Plan's Name", text: $MyPlanName)
+                                .font(.custom("Amiri-Bold", size: 26))
+                                .frame(width:200, height: 65)
+                                .background()
+                                .cornerRadius(15)
+                            
+                        }
+                        
+                    }
+                    VStack{
+                        
+                    listRowView(title: "Country", input: $Country)
+                            .padding()
+                    listRowView(title: "Region", input: $Region)
+                            .padding()
+                    }
+                        
                     HStack{
                         Stepper("Days of trip  :     \(Days)", value: $Days, in: 0...30)
                             .font(.custom("Amiri-BoldItalic", size: 24))
                             .padding(.horizontal)
+                            .background(.white.opacity(0.4))
+                            .cornerRadius(10)
+                            .padding()
                         
-                    }
+                    }.padding()
                     
                     VStack (spacing: 10){
                         HStack{
                             Text("Plases :")
                                 .font(.custom("Amiri-BoldItalic", size: 24))
                                 .frame(width:100, height: 60)
+                                .background(.white.opacity(0.4))
+                                .cornerRadius(10)
                             
                             TextField("    Places", text: $Places)
                                 .font(.custom("Amiri-Bold", size: 24))
@@ -89,11 +109,14 @@ struct CreateView: View {
                         
                         VStack{
                             HStack{
-                            Text("Write Some Notes :")
+                                Text("Write Some Notes :")
                                     .font(.custom("Amiri-BoldItalic", size: 24))
                                     .frame(height: 25)
                                     .modifier(MoodTextView())
-                                    
+                                    .background(.white.opacity(0.4))
+                                    .cornerRadius(10)
+                                    .padding()
+                                
                                 Spacer()
                             }
                             HStack{
@@ -102,11 +125,13 @@ struct CreateView: View {
                                     .frame(width:300, height: 100,alignment: .top)
                                     .background()
                                     .cornerRadius(15)
+                                    .padding()
                                 Spacer()
                             }
                             Spacer()
                         }.padding()
-                        
+                        Spacer()
+                        Spacer()
                         Button {
                             ShowAlert = true
                             
@@ -118,11 +143,13 @@ struct CreateView: View {
                                 .background(.black)
                                 .cornerRadius(18)
                         }
-
+                        
                     }
+                    .padding()
                 }
+                
             }
-            NavigationLink(destination: SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $MyNavigate){
+            NavigationLink(destination: SecCreateView(), isActive: $MyNavigate){
                 EmptyView()
             }
             
@@ -165,25 +192,25 @@ struct CreateView: View {
         }
         .alert("Done", isPresented: $ShowAlert) {
             
-//            NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView)
+            //            NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView)
             
-                Button("Continue", role: .destructive, action: goSecond )
-                Button("Cancel", role: .cancel){}
-
+            Button("Continue", role: .destructive, action: goSecond )
+            Button("Cancel", role: .cancel){}
+            
         }message: {
             Text("See Your Plan")
         }
- 
-       
+        
+        
     }
     func goSecond() {
         
         ShowSecCreateView = true
         
-        ListArray.append(MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note))
+        CustomPlans.append(MyPlansModel(PlanName: MyPlanName, MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note))
         
         MyNavigate.toggle()
-//       NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView){}
+        //       NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView){}
         
     }
 }

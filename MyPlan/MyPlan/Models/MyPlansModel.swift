@@ -11,6 +11,8 @@ struct MyPlansModel: Identifiable {
     
     let id = UUID()
     
+    var PlanName : String
+    
     var MyCountry : String
     var MyRegion : String
     var MyDays : Int
@@ -18,4 +20,9 @@ struct MyPlansModel: Identifiable {
     var MyNote : String
     
 }
+
+var Plcs: [String] = []
+
+var CustomPlans : [MyPlansModel] = []
+
 

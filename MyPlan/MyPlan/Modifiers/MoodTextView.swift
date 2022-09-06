@@ -18,4 +18,14 @@ struct MoodTextView: ViewModifier {
     }
 }
 
+struct OtherMood: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+        .font(.custom("Amiri-BoldItalic", size: 25))
+        .foregroundColor(.black)
+        
+
+    }
+}
+
 

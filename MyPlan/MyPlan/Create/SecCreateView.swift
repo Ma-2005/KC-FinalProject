@@ -8,45 +8,85 @@
 import SwiftUI
 
 struct SecCreateView: View {
-    
-    @State var ShowPlan : MyPlansModel
-    
     var body: some View {
         ZStack{
             Color("BG").ignoresSafeArea()
             
             VStack(spacing:12){
-                
-                ExtractedView(TextIn: "Country : \(ShowPlan.MyCountry)")
-                
-                ExtractedView(TextIn: "Region : \(ShowPlan.MyRegion)")
-                
-                ExtractedView(TextIn: "Days : \(ShowPlan.MyDays)")
-                
-                ExtractedView(TextIn: "Places : \(ShowPlan.MyPlaces)")
-                
-
+                ScrollView{
+                ForEach(CustomPlans){ plan in
+                    HStack{
+                        VStack{
+                            
+                            Text(plan.PlanName)
+                                .font(.custom("Amiri-BoldItalic", size: 24))
+                                .frame(height: 50)
+                                .modifier(MoodTextView())
+                                .padding()
+                                
+                            Spacer()
+                            AddPlanView(TextIn: "Country : \(plan.MyCountry)")
+                                .modifier(OtherMood())
+                            
+                            AddPlanView(TextIn: "Region : \(plan.MyRegion)")
+                                .modifier(OtherMood())
+                            
+                            AddPlanView(TextIn: "Days : \(plan.MyDays)")
+                                .modifier(OtherMood())
+                            
+                            VStack{
+                                AddPlanView(TextIn: "Places :")
+                                    .modifier(OtherMood())
+                                    .frame(height: 50)
+                                    .padding()
+                                
+                                ScrollView(.horizontal) {
+                                    HStack(spacing: 20) {
+                                        ForEach(Plcs, id: \.self){ Newplace in
+                                            
+                                            Text("\(Newplace)  ")
+                                            
+                                        }
+                                    }
+                                }
+                                .font(.custom("Amiri-BoldItalic", size: 24))
+                                .frame(height: 25)
+                                .modifier(MoodTextView())
+                                .padding()
+                            }
+                            
+                            
+                            VStack{
+                                HStack{
+                                    Text("Note : \n \(plan.MyNote)")
+                                        .modifier(OtherMood())
+                                    Spacer()
+                                }
+                                
+                            }
+                            .padding()
+                        Spacer()
+                        }
+                        .padding()
+                    Spacer()
+                }
+                    .padding()
+                }
             }
+            .font(.custom("Amiri-BoldItalic", size: 25))
+            .modifier(OtherMood())
+                
         }
-        .edgesIgnoringSafeArea(.all)
-
+        }
+        
+        
     }
 }
 
-//struct SecCreateView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SecCreateView()
-//    }
-//}
-
-struct ExtractedView: View {
-    
-    @State var TextIn : String
-    
-    var body: some View {
-        HStack{
-            Text(TextIn)
-        }
-        .frame(width:400, height: 65)
+struct SecCreateView_Previews: PreviewProvider {
+    static var previews: some View {
+        SecCreateView()
     }
 }
+
+

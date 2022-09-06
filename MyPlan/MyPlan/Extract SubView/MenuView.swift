@@ -26,7 +26,7 @@ struct MenuView: View {
                 .frame(width: 50, height: 50)
 
         }
-        .frame(width: 230, height: 50)
+        .frame(width: 200, height: 50)
         .background(.white.opacity(0.4))
         .cornerRadius(10)
     }

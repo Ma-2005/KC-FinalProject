@@ -31,6 +31,7 @@
 		043D359D28C4AE87007D8DA3 /* CreatePlcsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D359C28C4AE87007D8DA3 /* CreatePlcsModel.swift */; };
 		043D359F28C59161007D8DA3 /* MyPlansModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D359E28C59161007D8DA3 /* MyPlansModel.swift */; };
 		043D35A128C5DF50007D8DA3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D35A028C5DF50007D8DA3 /* SignUpView.swift */; };
+		043D35A628C66166007D8DA3 /* AddPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D35A528C66166007D8DA3 /* AddPlanView.swift */; };
 		045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BD28BA2DD800CCE00D /* MyPlanApp.swift */; };
 		045563C028BA2DD800CCE00D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045563BF28BA2DD800CCE00D /* ContentView.swift */; };
 		045563C228BA2DD900CCE00D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045563C128BA2DD900CCE00D /* Assets.xcassets */; };
@@ -50,7 +51,7 @@
 		043D357528C1227E007D8DA3 /* SecChooseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecChooseView.swift; sourceTree = "<group>"; };
 		043D357728C234EC007D8DA3 /* RegionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionModel.swift; sourceTree = "<group>"; };
 		043D357928C29370007D8DA3 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
-		043D357F28C29A1D007D8DA3 /* SecCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCreateView.swift; sourceTree = "<group>"; };
+		043D357F28C29A1D007D8DA3 /* SecCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecCreateView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		043D358328C33AD0007D8DA3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		043D358528C33FA7007D8DA3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		043D358728C390F0007D8DA3 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		043D359C28C4AE87007D8DA3 /* CreatePlcsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlcsModel.swift; sourceTree = "<group>"; };
 		043D359E28C59161007D8DA3 /* MyPlansModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlansModel.swift; sourceTree = "<group>"; };
 		043D35A028C5DF50007D8DA3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		043D35A528C66166007D8DA3 /* AddPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanView.swift; sourceTree = "<group>"; };
 		045563BA28BA2DD800CCE00D /* MyPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045563BD28BA2DD800CCE00D /* MyPlanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanApp.swift; sourceTree = "<group>"; };
 		045563BF28BA2DD800CCE00D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				043D357328C11A17007D8DA3 /* RepoView.swift */,
 				043D358E28C4053E007D8DA3 /* listRowView.swift */,
 				043D359A28C49913007D8DA3 /* MenuView.swift */,
+				043D35A528C66166007D8DA3 /* AddPlanView.swift */,
 			);
 			path = "Extract SubView";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				043D359F28C59161007D8DA3 /* MyPlansModel.swift in Sources */,
 				043D358828C390F0007D8DA3 /* ThirdView.swift in Sources */,
 				043D358628C33FA7007D8DA3 /* HomeView.swift in Sources */,
+				043D35A628C66166007D8DA3 /* AddPlanView.swift in Sources */,
 				043D359928C48DEA007D8DA3 /* SideMenuView.swift in Sources */,
 				043D359B28C49913007D8DA3 /* MenuView.swift in Sources */,
 				043D357A28C29370007D8DA3 /* TripView.swift in Sources */,
@@ -421,9 +425,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyPlan/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PS77ZXW84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPlan/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Trip;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -450,9 +456,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MyPlan/Preview Content\"";
+				DEVELOPMENT_TEAM = 4PS77ZXW84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyPlan/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Trip;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

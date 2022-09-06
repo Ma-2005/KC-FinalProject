@@ -31,7 +31,7 @@ struct ChooseView: View {
                     Spacer()
                     VStack(spacing:25){
                         VStack(spacing: 10){
-                            RepoView(Plans: Plans)
+                            RepoView(Plans: ReadyPlans)
                             
                         }
                     }
