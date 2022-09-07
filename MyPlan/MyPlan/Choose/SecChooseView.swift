@@ -26,9 +26,9 @@ struct SecChooseView: View {
             
             Color("BG").ignoresSafeArea()
             VStack {
-                ForEach(G.Region){ C in
+                
                 ZStack{
-                    Image(C.NameRegion)
+                    Image(G.Region[0].NameRegion)
                         .resizable()
                         .scaledToFit()
 //                        .frame(width: .infinity ,height: 300, alignment: .center)
@@ -37,7 +37,7 @@ struct SecChooseView: View {
                     VStack {
                         HStack{
                             Spacer()
-                            Text(C.NameRegion)
+                            Text(G.Region[0].NameRegion)
                                 .font(.custom("Amiri-BoldItalic", size: 25))
                                 .foregroundColor(.black)
                                 .padding()
@@ -79,7 +79,7 @@ struct SecChooseView: View {
                     
                     ScrollView(.horizontal){
                     HStack{
-                        ForEach(C.Places){ P in
+                        ForEach(G.Region[0].Places){ P in
                                 ZStack{
                                     VStack{
 
@@ -98,6 +98,7 @@ struct SecChooseView: View {
                                 .background(.white.opacity(0.4))
                                 .cornerRadius(10)
                                 .onTapGesture {
+                                    
                                     PInfo = P
                                     place.toggle()
                                 }
@@ -120,9 +121,9 @@ struct SecChooseView: View {
                             .background(.black)
                             .cornerRadius(18)
                     }
-                }
                 
-                .frame(width: 370, height: 820, alignment: .bottom)
+                
+//                .frame(width: 370, height: 20, alignment: .bottom)
 //                Spacer()
                 }
 //                }

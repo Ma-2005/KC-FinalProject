@@ -49,7 +49,7 @@ var body: some View {
 //                                }
 //                                }
                         }
-                        }
+                    }
                     }
                     .frame(width: 200, height: 200)
                     .background(.white.opacity(0.4))
