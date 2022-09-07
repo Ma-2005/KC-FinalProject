@@ -66,7 +66,7 @@ struct HomeView: View {
           Button {
             self.ShowMenu.toggle()
           } label: {
-            
+//            
             if ShowMenu {
               
               Image(systemName: "xmark")
