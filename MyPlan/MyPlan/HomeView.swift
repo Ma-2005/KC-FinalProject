@@ -71,7 +71,7 @@ struct HomeView: View {
               
               Image(systemName: "xmark")
                 .resizable()
-                .frame(width: 25, height: 20)
+                .frame(width: 25, height: 25)
                 .foregroundColor(.black)
                 
             } else {

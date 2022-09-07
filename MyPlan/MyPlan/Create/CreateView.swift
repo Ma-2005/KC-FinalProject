@@ -149,53 +149,53 @@ struct CreateView: View {
                 }
                 
             }
-            NavigationLink(destination: SecCreateView(), isActive: $MyNavigate){
+            NavigationLink(destination: MyPlansView(), isActive: $MyNavigate){
                 EmptyView()
             }
             
             GeometryReader { _ in
+              
+              HStack {
+                Spacer()
                 
-                HStack {
-                    Spacer()
-                    
-                    SideMenuView()
-                        .offset(x: ShowMenu ? 0 : UIScreen.main.bounds.width)
-                        .animation(.easeInOut(duration: 0.4), value: ShowMenu)
-                }
-                
+                SideMenuView()
+                  .offset(x: ShowMenu ? 0 : UIScreen.main.bounds.width)
+                  .animation(.easeInOut(duration: 0.4), value: ShowMenu)
+              }
+              
             }
-            .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
+            .background(Color.black.opacity(ShowMenu ? 0.7 : 0))
         }
-        .navigationBarTitle(Text("Create your plan"), displayMode: .inline)
+        .navigationBarTitle(ShowMenu ? "" : "Create your plan", displayMode: .inline)
         .toolbar {
+          
+          Button {
+            self.ShowMenu.toggle()
+          } label: {
             
-            Button {
-                self.ShowMenu.toggle()
+            if ShowMenu {
+              
+              Image(systemName: "xmark")
+                .resizable()
+                .frame(width: 25, height: 25)
+                .foregroundColor(.black)
                 
-            } label: {
+            } else {
+              Image(systemName: "line.3.horizontal")
+                .resizable()
+                .frame(width: 25, height: 20)
+                .foregroundColor(.black)
                 
-                if ShowMenu {
-                    
-                    Image(systemName: "xmark")
-                        .resizable()
-                        .frame(width: 25, height: 20)
-                        .foregroundColor(.black)
-                    
-                } else {
-                    Image(systemName: "line.3.horizontal")
-                        .resizable()
-                        .frame(width: 25, height: 20)
-                        .foregroundColor(.black)
-                    
-                }
             }
+            
+          }
         }
         .alert("Save Your Plan !!", isPresented: $ShowAlert) {
             
             //            NavigationLink( destination:  SecCreateView(ShowPlan: MyPlansModel(MyCountry: Country, MyRegion: Region, MyDays: Days, MyPlaces: [Places], MyNote: Note)), isActive: $ShowSecCreateView)
             
-            Button("Continue", role: .destructive, action: goSecond )
-            Button("Cancel", role: .cancel){}
+            Button("Continue", role: .cancel , action: goSecond )
+            Button("Cancel", role: .destructive){}
             
         }message: {
             Text("See Your Plan")

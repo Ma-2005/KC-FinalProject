@@ -43,10 +43,11 @@ struct SignUpView: View {
         ZStack{
             Color("BG").ignoresSafeArea()
             
-            VStack(spacing: 65){
+            VStack(spacing: 45){
+            
                 Spacer()
                 VStack{
-                    Spacer()
+                    
                     Image("logo")
                         .resizable()
                         .scaledToFit()
@@ -61,29 +62,32 @@ struct SignUpView: View {
                         .cornerRadius(25)
                     
                 }
-                VStack(spacing: 20){
+                
+               
                     
+                VStack {
                     VStack {
-                        HStack(spacing: 50){
-                            VStack{
-                                Text("First name :")
-                                
-                                TextField("  First name", text: $FirstName)
-                                    .font(.custom("Amiri-Bold", size: 24))
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                            HStack(spacing: 50){
+                                VStack{
+                                    Text("First name :")
                                     
-                            }
-                            
-                            VStack{
-                                Text("Last name :")
+                                    TextField("  First name", text: $FirstName)
+                                        .font(.custom("Amiri-Bold", size: 24))
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        
+                                }
                                 
-                                TextField("  First name", text: $LastName)
-                                    .font(.custom("Amiri-Bold", size: 24))
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                                VStack{
+                                    Text("Last name :")
                                     
+                                    TextField("  First name", text: $LastName)
+                                        .font(.custom("Amiri-Bold", size: 24))
+                                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                                        
+                                }
                             }
-                        }
                     }
+                
                     
                     
                     VStack {
@@ -124,7 +128,7 @@ struct SignUpView: View {
                             }
                         }
                     }
-                    
+                }
                     NavigationLink(destination: HomeView()) {
                         Text("Sign In")
                             .font(.custom("Amiri-BoldItalic", size: 35))
@@ -134,12 +138,13 @@ struct SignUpView: View {
                             .cornerRadius(25)
                     }
                     
-                    Spacer()
-                }.padding()
                 Spacer()
+              
                 
             }
-            
+           
+            .frame(width: .infinity, height:800)
+            .padding()
         }
         
         .navigationBarBackButtonHidden(true)

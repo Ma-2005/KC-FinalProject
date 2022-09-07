@@ -30,7 +30,8 @@ var body: some View {
                     ScrollView(.horizontal) {
                         HStack(spacing: 20) {
                         ForEach(plan.Region){ region in
-                            NavigationLink( destination: SecChooseView(C: region, M: PlaceModel(Name: "M", Information: "M", timesOpen: "q"))) {
+        
+                            NavigationLink( destination: SecChooseView(G: PlanModel(Country: plan.Country, Region: [region], Days: plan.Days))) {
                     ZStack{
                         VStack{
 //                            ScrollView(.horizontal){
@@ -53,8 +54,9 @@ var body: some View {
                     .frame(width: 200, height: 200)
                     .background(.white.opacity(0.4))
                     .cornerRadius(10)
-                    }
-                }
+                    
+            }
+        }
                 }
             }
         }

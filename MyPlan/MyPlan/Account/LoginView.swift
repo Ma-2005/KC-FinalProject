@@ -121,7 +121,8 @@ struct LoginView: View {
               }
               
             }
-            .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
+            .background(Color.black.opacity(ShowMenu ? 0.7 : 0))
+
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {

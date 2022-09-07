@@ -51,7 +51,7 @@ struct ChooseView: View {
               }
               
             }
-            .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
+            .background(Color.black.opacity(ShowMenu ? 0.7 : 0))
         }
 //        .navigationTitle("Choose the destnation")
         .navigationBarTitle(ShowMenu ? "" : "Choose the destnation", displayMode: .inline)
@@ -65,7 +65,7 @@ struct ChooseView: View {
               
               Image(systemName: "xmark")
                 .resizable()
-                .frame(width: 25, height: 20)
+                .frame(width: 25, height: 25)
                 .foregroundColor(.black)
                 
             } else {

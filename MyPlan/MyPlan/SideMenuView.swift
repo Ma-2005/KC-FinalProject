@@ -13,6 +13,7 @@ struct SideMenuView: View {
             VStack{
             Image(systemName: "person.crop.circle")
                 .font(.custom("", size: 65))
+                
             }
             .frame(width: 220, height: 200, alignment: .center)
             
@@ -55,8 +56,9 @@ struct SideMenuView: View {
                             .frame(width: 200, height: 50)
                         }
                     }.foregroundColor(.black)
+                    Spacer()
                 }
-            
+            Spacer()
             Spacer()
             }
         }

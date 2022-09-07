@@ -16,16 +16,19 @@ struct MenuView: View {
     var body: some View {
         HStack(spacing: 20){
             
-            
+            Spacer()
             Text(PageName)
                 .frame(width: 100, height: 50, alignment: .leading)
             
             Spacer()
             Image(systemName: IconName)
                 .font(.custom("", size: 30))
-                .frame(width: 50, height: 50)
-
+                .frame(width: 50, height: 50, alignment: .trailing)
+            Spacer()
         }
-        .frame(width: 200, height: 50)
+        
+        .frame(width: 210, height: 50)
+        .background(.white.opacity(0.4))
+        .cornerRadius(14)
     }
 }
