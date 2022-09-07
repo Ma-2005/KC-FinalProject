@@ -79,7 +79,7 @@ struct MyPlansView: View {
         }
                         .font(.custom("Amiri-Bold", size: 24))
                         .padding()
-                        .background(.white.opacity(0.4))
+                        .background(Color("BG"))
                         .cornerRadius(8)
                         Spacer()
                     }
@@ -131,7 +131,8 @@ struct MyPlansView: View {
         
                                                         
                         }
-                            .background(.white.opacity(0.4))
+                                                    .padding()
+                            .background(.white.opacity(0.2))
                             .cornerRadius(10)
         
                                             
