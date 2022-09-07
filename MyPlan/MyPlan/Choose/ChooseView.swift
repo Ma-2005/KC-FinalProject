@@ -14,7 +14,7 @@ struct ChooseView: View {
     var body: some View {
         
         ZStack{
-            Color("BG").ignoresSafeArea().opacity(1)
+            Color.white.ignoresSafeArea()
             VStack{
                 
 //                HStack{
@@ -28,12 +28,9 @@ struct ChooseView: View {
 //                }
                 
                 ScrollView{
-                    Spacer()
-                    VStack(spacing:25){
-                        VStack(spacing: 10){
-                            RepoView(Plans: ReadyPlans)
+                    VStack{
+                        RepoView(Plans: ReadyPlans)
                             
-                        }
                     }
                 }
                 Spacer()

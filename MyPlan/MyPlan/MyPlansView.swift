@@ -9,8 +9,11 @@ import SwiftUI
 
 struct MyPlansView: View {
     var body: some View {
+        
+        
+        
         ZStack{
-            Color("BG").ignoresSafeArea()
+            Color.white.ignoresSafeArea()
             
             ScrollView{
                 
@@ -29,7 +32,7 @@ struct MyPlansView: View {
                             .cornerRadius(8)
             }
                     HStack{
-                        VStack(spacing: 5){
+                        VStack(spacing: 10){
                             HStack{
                             Text("Country : \(MyPlans.MyCountry)")
                             
@@ -82,7 +85,7 @@ struct MyPlansView: View {
                     }
                     .padding()
         }
-                
+            
                 ForEach(MyReadyPlans){MyPlan in
                     
                     HStack{
@@ -128,7 +131,7 @@ struct MyPlansView: View {
         
                                                         
                         }
-                            .background(.white.opacity(0.7))
+                            .background(.white.opacity(0.4))
                             .cornerRadius(10)
         
                                             
@@ -144,7 +147,7 @@ struct MyPlansView: View {
                         }
                         .font(.custom("Amiri-Bold", size: 24))
                         .padding()
-                        .background(.white.opacity(0.4))
+                        .background(Color("BG"))
                         .cornerRadius(8)
                         Spacer()
                     

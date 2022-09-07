@@ -19,41 +19,43 @@ var body: some View {
 //            HStack(spacing: 20) {
                 ForEach(Plans){ plan in
                     
-                    HStack{
-                        Text(plan.Country)
-                            .font(.custom("Amiri-BoldItalic", size: 25))
-                        
-                        Spacer()
-                    }
-                    .modifier(MoodTextView())
+//                    HStack{
+//                        Text(plan.Country)
+//                            .font(.custom("Amiri-BoldItalic", size: 25))
+//                        
+//                        Spacer()
+//                    }
+//                    .modifier(MoodTextView())
                     
                     ScrollView(.horizontal) {
                         HStack(spacing: 20) {
                         ForEach(plan.Region){ region in
         
                             NavigationLink( destination: SecChooseView(G: PlanModel(Country: plan.Country, Region: [region], Days: plan.Days))) {
-                    ZStack{
-                        VStack{
-//                            ScrollView(.horizontal){
-//                            HStack{
-                           
-                            Image(region.NameRegion)
-                                .resizable()
-                                .frame(width: 200, height: 150)
-                                .cornerRadius(10)
-                            Spacer()
-                        
-                            Text(region.NameRegion)
-                                .foregroundColor(.black)
-                                .font(.custom("Amiri-Italic", size: 26))
-//                                }
-//                                }
-                        }
+//                    ZStack{
+//                        VStack{
+////                            ScrollView(.horizontal){
+////                            HStack{
+//
+//                            Image(region.NameRegion)
+//                                .resizable()
+//                                .frame(width: 200, height: 150)
+//                                .cornerRadius(10)
+//                            Spacer()
+//
+//                            Text(region.NameRegion)
+//                                .foregroundColor(.black)
+//                                .font(.custom("Amiri-Italic", size: 26))
+////                                }
+////                                }
+//                        }
+//                    }
+                                CardView(title: region.NameRegion, location: plan.Country, image: region.NameRegion)
+                                    
                     }
-                    }
-                    .frame(width: 200, height: 200)
-                    .background(.white.opacity(0.4))
-                    .cornerRadius(10)
+                            .padding()
+//                    .background(.white.opacity(0.4))
+//                    .cornerRadius(10)
                     
             }
         }

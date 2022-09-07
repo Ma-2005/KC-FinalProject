@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04097ECF28C8FB0C007885F6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04097ECE28C8FB0C007885F6 /* CardView.swift */; };
+		04097ED128C90AE4007885F6 /* CreatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04097ED028C90AE4007885F6 /* CreatingView.swift */; };
 		043D354328BCF213007D8DA3 /* Amiri-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D353F28BCF213007D8DA3 /* Amiri-Italic.ttf */; };
 		043D354428BCF213007D8DA3 /* Amiri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D354028BCF213007D8DA3 /* Amiri-Bold.ttf */; };
 		043D354528BCF213007D8DA3 /* Amiri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 043D354128BCF213007D8DA3 /* Amiri-Regular.ttf */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04097ECE28C8FB0C007885F6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		04097ED028C90AE4007885F6 /* CreatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatingView.swift; sourceTree = "<group>"; };
 		043D353F28BCF213007D8DA3 /* Amiri-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Italic.ttf"; sourceTree = "<group>"; };
 		043D354028BCF213007D8DA3 /* Amiri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Bold.ttf"; sourceTree = "<group>"; };
 		043D354128BCF213007D8DA3 /* Amiri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amiri-Regular.ttf"; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				043D354828BD0F74007D8DA3 /* ChooseView.swift */,
 				043D357528C1227E007D8DA3 /* SecChooseView.swift */,
 				043D358728C390F0007D8DA3 /* ThirdView.swift */,
+				04097ECE28C8FB0C007885F6 /* CardView.swift */,
 			);
 			path = Choose;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				043D356B28BFF925007D8DA3 /* CreateView.swift */,
+				04097ED028C90AE4007885F6 /* CreatingView.swift */,
 				043D357F28C29A1D007D8DA3 /* SecCreateView.swift */,
 			);
 			path = Create;
@@ -291,11 +297,13 @@
 				043D359328C46FBF007D8DA3 /* MyPlansView.swift in Sources */,
 				043D359D28C4AE87007D8DA3 /* CreatePlcsModel.swift in Sources */,
 				045563BE28BA2DD800CCE00D /* MyPlanApp.swift in Sources */,
+				04097ED128C90AE4007885F6 /* CreatingView.swift in Sources */,
 				043D35A128C5DF50007D8DA3 /* SignUpView.swift in Sources */,
 				043D358F28C4053E007D8DA3 /* listRowView.swift in Sources */,
 				043D357428C11A17007D8DA3 /* RepoView.swift in Sources */,
 				043D358A28C3DABB007D8DA3 /* PlaceModel.swift in Sources */,
 				043D356C28BFF925007D8DA3 /* CreateView.swift in Sources */,
+				04097ECF28C8FB0C007885F6 /* CardView.swift in Sources */,
 				043D357628C1227E007D8DA3 /* SecChooseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

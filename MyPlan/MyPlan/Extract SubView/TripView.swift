@@ -14,11 +14,11 @@ struct  TripView: View {
     var body: some View {
        
             Text(titel)
-                .font(.custom("Amiri-BoldItalic", size: 35))
-                .foregroundColor(.black)
-                .frame(width: 285, height:100)
-                .background(.white.opacity(0.4))
-                .cornerRadius(25)
+                .font(.custom("Amiri-Bold", size: 20))
+                .foregroundColor(.white)
+                .frame(width: 350, height:70)
+                .background(Color("BG"))
+                .cornerRadius(12)
         
     }
 }

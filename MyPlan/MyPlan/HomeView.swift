@@ -14,8 +14,14 @@ struct HomeView: View {
     var body: some View {
         
         NavigationView{
-        ZStack{
-            Color("BG").ignoresSafeArea()
+            ZStack(alignment: .center){
+            Image("e")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .blur(radius: 0.8)
+                Color.black.opacity(0.23).ignoresSafeArea()
+                
             VStack(spacing: 38){
 
                 VStack(spacing: 15){
@@ -25,27 +31,34 @@ struct HomeView: View {
                     .frame(width: 150, height: 150)
                     .background(.white.opacity(0.4))
                     .cornerRadius(25)
-                
-                Text("Plan your trip")
-                    .font(.custom("Amiri-BoldItalic", size: 45))
-                    .padding(.horizontal)
-                    .background(.white.opacity(0.4))
-                    .cornerRadius(25)
+                    VStack(spacing: -15){
+                Text("Plan your ")
+                    .font(.custom("Amiri-Regular", size: 45))
+                    
+
+                    
+                    Text("Trip")
+                        .font(.custom("Amiri-Regular", size: 45))
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("BG"))
+                    }
                 }
                 
                 Spacer()
-                VStack(spacing: 45){
+                VStack{
                     NavigationLink (destination: ChooseView()) {
                     TripView(titel: "Choose your plan")
                  
                     }
                   
-                NavigationLink (destination: CreateView()) {
+                NavigationLink (destination: CreatingView()) {
                     TripView(titel: "Create Your Plan")
                     
                 }
                 }
-                Spacer()
+                .padding()
+                
+                
                 }
             GeometryReader { _ in
               
@@ -61,12 +74,13 @@ struct HomeView: View {
             .background(Color.black.opacity(ShowMenu ? 0.5 : 0))
 
         }
+//            .navigationBarTitle("", displayMode: .inline)
         .toolbar {
           
           Button {
             self.ShowMenu.toggle()
           } label: {
-//            
+//
             if ShowMenu {
               
               Image(systemName: "xmark")
