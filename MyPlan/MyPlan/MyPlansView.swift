@@ -129,7 +129,7 @@ struct MyPlansView: View {
                 }
             }
         
-                                                        
+//                                                        
                         }
                                                     .padding()
                             .background(.white.opacity(0.2))
