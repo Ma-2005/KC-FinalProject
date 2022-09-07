@@ -55,15 +55,7 @@ struct SecChooseView: View {
             VStack(spacing: 20){
 //                    Spacer()
                 VStack(spacing: 120){
-//                    Spacer()
-//                    VStack{
-//                        Spacer()
-//                        Spacer()
-//
-//                        Spacer()
-//                        Spacer()
-//                        Spacer()
-//                        Spacer()
+                    
                     VStack{
                     HStack{
                         
@@ -77,8 +69,8 @@ struct SecChooseView: View {
                     .background(.white.opacity(0.4))
                     .cornerRadius(15)
                     
-                    ScrollView(.horizontal){
-                    HStack{
+                    ScrollView{
+                 
                         ForEach(G.Region[0].Places){ P in
                                 ZStack{
                                     VStack{
@@ -104,8 +96,10 @@ struct SecChooseView: View {
                                 }
                                 
                             }
-                        }
+                        
                     }
+                    .frame(width: 360, height: 350)
+
                     }
                 }
             }
@@ -127,7 +121,7 @@ struct SecChooseView: View {
 //                Spacer()
                 }
 //                }
-//                .frame(width: 370, height: 400)
+                .frame(width: 370, height: 400)
             
             }
             .edgesIgnoringSafeArea(.all)
